@@ -2,7 +2,7 @@
     <div class="text-center">
       <v-dialog
         v-model="dialog"
-        width="auto"
+        max-width="720px"
       >
         <template v-slot:activator="{ props }">
           <CustomButton
@@ -22,7 +22,7 @@
             </v-row>
             <v-row>
               <v-col>
-                <CustomButton variant="text" color="error" @click="dialog = false">Close Dialog</CustomButton>
+                <CustomButton  @click="dialog = false">Close</CustomButton>
               </v-col>
             </v-row>
           </v-card-text>

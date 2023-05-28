@@ -15,7 +15,9 @@
     :color="props.color as string"
     :variant="props.variant as BtnVariantType"
 >
-  <slot/>
+  <span class="btn-text">
+    <slot/>
+  </span>
 </VBtn>
 </template>
 <script setup lang="ts">
@@ -42,7 +44,7 @@ const props = defineProps({
   },
   height: {
     type: String || Number,
-    default: '58px'
+    default: '40px'
   },
   width: {
     type: String || Number,
@@ -70,4 +72,9 @@ const onClick = async(event: MouseEvent) => {
   }
 };
 </script>
-
+<style scoped>
+.btn-text {
+  letter-spacing: 0;
+  text-transform: none;
+}
+</style>

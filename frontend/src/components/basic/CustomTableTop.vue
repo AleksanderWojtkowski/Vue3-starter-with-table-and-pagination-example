@@ -1,10 +1,11 @@
 <template>
 <v-row>
-  <v-col v-if="pagination" :cols="mdAndUp ? 6 : 12">
+  <v-col v-if="pagination" :cols="mdAndUp ? 6 : 12" :class="{'pb-0': !mdAndUp}">
     <v-pagination
       :length="pagination.maxPage as number"
       v-model="pagination.page"
       :disabled="pagination.maxPage === 0"
+      density="compact"
       @update:modelValue="() => emit('update:pagination')"
     ></v-pagination>
   </v-col>

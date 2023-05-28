@@ -3,4 +3,5 @@ export interface DataTableColumn {
   field: string;
   align?: string;
   hideDetails?: boolean;
+  cssClass?: string;
 }

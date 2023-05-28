@@ -32,10 +32,10 @@ const messages = ref<MessageDto[]>([]);
 const requestConfig  = ref<MessagesRequestConfig>(new MessagesRequestConfig());
 const pagination = ref<Pagination>(new Pagination())
 const tableColumns: DataTableColumn[] = [
-  { label: 'Id', field: 'id' },
-  { label: 'Name', field: 'title' },
+  { label: 'Id', field: 'id', cssClass: 'text-disabled' },
+  { label: 'Name', field: 'title', cssClass:'font-weight-bold' },
   { label: 'Date', field: 'date', align: 'center'},
-  { label: 'Sender', field: 'email'},
+  { label: 'Sender', field: 'email', cssClass:'text-secondary'},
   { label: 'Message', field: 'body', hideDetails: true },
 ];
 

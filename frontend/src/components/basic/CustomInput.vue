@@ -11,6 +11,7 @@
       :placeholder="props.placeholder as string"
       :type="props.type as string"
       :variant="props.variant as VariantType"
+      :color="props.color as string"
       hide-details="auto"
     ></VTextField>
   </CustomField>
@@ -29,6 +30,10 @@ const props = defineProps({
   },
   ...BaseInputProps,
   ...TextInputProps,
+  color: {
+    type: String as PropType<string>,
+    default: 'primary'
+  },
 });
 
 const model = computed<string | number | null | void>({

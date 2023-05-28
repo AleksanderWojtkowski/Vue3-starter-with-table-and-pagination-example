@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col>
-      <h1>My inbox</h1>
+      <h1 class="mb-4">My inbox</h1>
       <MessageList/>
     </v-col>
   </v-row>

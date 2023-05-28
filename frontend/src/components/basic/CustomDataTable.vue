@@ -9,16 +9,18 @@
       <table>
         <thead>
         <tr>
-          <th v-for="column in columns" :key="column.field">{{ column.label }}</th>
+          <th v-for="column in columns" :key="column.field" :class="column.align && `text-${column.align}`">
+            {{ column.label }}
+          </th>
         </tr>
         </thead>
         <tbody>
         <tr v-for="item in items" :key="item.id">
-          <td v-for="column in columns" :key="column.field">
-            <CustomModal v-if="column.hideDetails" label="👀">
+          <td v-for="column in columns" :class="column.align && `text-${column.align}`" :key="column.field">
+            <CustomModal v-if="column.hideDetails" label="🔍">
               <p>{{item[column.field]}}</p>
             </CustomModal>
-            <p v-else class="row-text">{{item[column.field]}}</p>
+            <p v-else :class="column.cssClass">{{item[column.field]}}</p>
           </td>
         </tr>
         </tbody>
@@ -47,7 +49,6 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
-
 th,
 td {
   padding: 8px;
@@ -56,12 +57,8 @@ td {
 }
 
 th {
-  background-color: #f2f2f2;
-}
-.row-text {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  background-color: #363a3d;
+  color: white
 }
 </style>
 

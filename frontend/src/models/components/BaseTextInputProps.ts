@@ -22,11 +22,11 @@ export const TextInputProps: ComponentObjectPropsOptions<TextInputPropsType> = {
   },
   variant: {
     type: String as PropType<VariantType>,
-    default: 'filled',
+    default: 'outlined',
   },
   density: {
     type: String as PropType<DensityType>,
-    default: "default",
+    default: "compact",
     required: false,
   },
   class: {
