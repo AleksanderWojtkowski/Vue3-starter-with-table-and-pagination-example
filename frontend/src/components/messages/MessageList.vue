@@ -34,7 +34,7 @@ const pagination = ref<Pagination>(new Pagination())
 const tableColumns: DataTableColumn[] = [
   { label: 'Id', field: 'id', cssClass: 'text-disabled' },
   { label: 'Name', field: 'title', cssClass:'font-weight-bold' },
-  { label: 'Date', field: 'date', align: 'center'},
+  { label: 'Date', field: 'date', align: 'center', cssClass:'text-wrap' },
   { label: 'Sender', field: 'email', cssClass:'text-secondary'},
   { label: 'Message', field: 'body', hideDetails: true },
 ];

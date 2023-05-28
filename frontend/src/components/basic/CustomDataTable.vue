@@ -20,7 +20,7 @@
             <CustomModal v-if="column.hideDetails" label="🔍">
               <p>{{item[column.field]}}</p>
             </CustomModal>
-            <p v-else :class="column.cssClass">{{item[column.field]}}</p>
+            <p v-else :class="column.cssClass" class="row-text">{{item[column.field]}}</p>
           </td>
         </tr>
         </tbody>
@@ -59,6 +59,11 @@ td {
 th {
   background-color: #363a3d;
   color: white
+}
+.row-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 </style>
 
